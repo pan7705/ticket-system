@@ -27,7 +27,7 @@ class TicketSystemController extends Controller
         $lastTicketNumber = $lastTicket ? $lastTicket->ticket_number : 0;
         $nowServingNumber = $nowServing ? $nowServing->ticket_number : 'None';
 
-        return view('ticket-system', compact('counters', 'lastTicketNumber', 'nowServingNumber'));
+        return view('index', compact('counters', 'lastTicketNumber', 'nowServingNumber'));
     }
 
     public function takeNumber()
